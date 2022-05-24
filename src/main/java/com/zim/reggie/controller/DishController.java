@@ -46,7 +46,7 @@ public class DishController {
         //清理所有菜品的缓存数据
         /*Set keys = redisTemplate.keys("dish_*");
         redisTemplate.delete(keys);*/
-
+        /**/
         //清理某个分类下面的缓存
         String keys = "dish_"+dishDto.getCategoryId()+"_"+dishDto.getStatus();
         redisTemplate.delete(keys);
