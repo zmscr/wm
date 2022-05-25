@@ -8,6 +8,9 @@ spring:
     port: 6379
     database: 0
     #password: 985622
+  cache:
+    redis:
+      time-to-live: 1800000
   application:
     name: mmjbxgwm
   datasource:
@@ -18,7 +21,6 @@ spring:
       password: 985622
 mybatis-plus:
   configuration:
-    #��ӳ��ʵ���������ʱ�������ݿ��б������ֶ����е��»���ȥ���������շ�������ӳ��
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
