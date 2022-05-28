@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Slf4j
 @SpringBootApplication
@@ -17,4 +19,6 @@ public class ReggieApplication {
         SpringApplication.run(ReggieApplication.class,args);
         log.info("success");
     }
+
+
 }

@@ -12,6 +12,7 @@ import com.zim.reggie.entity.SetmealDish;
 import com.zim.reggie.service.CateGoryService;
 import com.zim.reggie.service.SetmealDishService;
 import com.zim.reggie.service.SetmealService;
+import io.swagger.annotations.Api;
 import javafx.scene.chart.ValueAxis;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -27,6 +28,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/setmeal")
 @Slf4j
+@Api("套餐相关接口")
 public class SetmealController {
     @Autowired
     private SetmealDishService setmealDishService;
