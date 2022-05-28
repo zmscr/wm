@@ -18,4 +18,7 @@ public interface SetmealService extends IService<Setmeal> {
 
 
     public void deleteWithDish(List<Long> ids);
+
+    //删除套餐
+    SetmealDto getDate(Long id);
 }
