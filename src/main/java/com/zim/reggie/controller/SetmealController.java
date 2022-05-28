@@ -142,4 +142,15 @@ public class SetmealController {
 
         return R.error("设置错误");
     }
+
+    //修改套餐
+
+    @GetMapping("/{id}")
+    public R<SetmealDto> getData(@PathVariable Long id){
+        SetmealDto setmealDto = setmealService.getDate(id);
+
+        return R.success(setmealDto);
+    }
+
+
 }

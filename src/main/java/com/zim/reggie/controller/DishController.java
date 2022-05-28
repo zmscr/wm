@@ -263,4 +263,16 @@ public class DishController {
 
         return R.error("设置错误");
     }
+
+    @DeleteMapping
+    public R<String> delete(@RequestParam("ids")List<Long> ids){
+        log.info(ids.toString());
+
+        dishService.deleteById(ids);
+
+        LambdaQueryWrapper<DishFlavor> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.in(DishFlavor::getDishId,ids);
+        dishFlavorService.remove(queryWrapper);
+        return R.success("菜品删除成功");
+    }
 }
